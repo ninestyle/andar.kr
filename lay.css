@@ -1,27 +1,25 @@
 /*
-Last Modified: 2025-07-16 13:10
-Contact Us: https://www.maxim.pe.kr
-© 2025 Maxim. All Rights Reserved.
+    Version: 2.2.0
+    Last Modified: 2025-11-17
+    Contact Us: https://www.maxim.pe.kr
+    © 2025 Maxim. All Rights Reserved.
 */
 
-/* --- Theme: ANDAR Aroma & Spa (Calm Green & Gold) --- */
 :root {
-    /* 1. Light Mode Palette */
-    --color-accent-primary: #5A7D7C; /* Calm, Deep Green */
+    --color-accent-primary: #5A7D7C; 
     --color-accent-primary-hover: #4B6867;
-    --color-accent-secondary: #C4A484; /* Soft Gold/Amber */
-    --color-text-strong: #3B3B3B; /* Dark Gray */
+    --color-accent-secondary: #C4A484; 
+    --color-text-strong: #3B3B3B; 
     --color-text-default: #5E5E5E;
     --color-text-soft: #808080;
     --color-text-meta: #9E9E9E;
     --color-surface-primary: #FFFFFF;
-    --color-surface-secondary: #F5F3F0; /* Warm, Light Beige */
+    --color-surface-secondary: #F5F3F0; 
     --color-surface-subtle: #EAE7E2;
     --color-border-subtle: #DCD8D1;
     --color-text-on-accent: #FFFFFF;
     --color-background-dark: #333333;
 
-    /* 2. Light Mode Component Mapping */
     --bg-primary: var(--color-surface-primary);
     --bg-secondary: var(--color-surface-secondary);
     --bg-navbar-animated: linear-gradient(45deg, #ffffff, #f5f3f0, #ffffff, #eae7e2);
@@ -34,12 +32,14 @@ Contact Us: https://www.maxim.pe.kr
     --bg-nav-icon-button-hover: var(--color-accent-primary-hover);
     --bg-to-top-button: rgba(90, 125, 124, 0.7);
     --bg-to-top-button-hover: rgba(90, 125, 124, 0.9);
-    --bg-home-overlay: rgba(0, 0, 0, 0.4);
-    --bg-cta-button: var(--color-accent-primary);
-    --bg-cta-button-hover: var(--color-accent-primary-hover);
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    --bg-button: var(--color-accent-primary);
+    --bg-button-hover: var(--color-accent-primary-hover);
     --bg-price-info: rgba(90, 125, 124, 0.05);
     --bg-offer-badge: var(--color-accent-secondary);
     --bg-price-image-placeholder: var(--color-surface-subtle);
+    --bg-form-input: var(--color-surface-primary);
+    --bg-form-input-focus: var(--color-surface-primary);
 
     --text-primary: var(--color-text-default);
     --text-secondary: var(--color-text-soft);
@@ -54,28 +54,36 @@ Contact Us: https://www.maxim.pe.kr
     --text-to-top-button: var(--color-text-on-accent);
     --text-price-meta: var(--color-text-soft);
     --text-section-title-icon: var(--color-border-subtle);
-    --text-cta-button: var(--color-text-on-accent);
+    --text-button: var(--color-text-on-accent);
     --text-offer-badge: #FFFFFF;
     --price-value-setup-color: var(--color-accent-secondary);
     --text-job-title: var(--color-text-meta);
+    --text-form-input: var(--color-text-strong);
+    --text-form-placeholder: var(--color-text-meta);
 
     --border-card: var(--color-border-subtle);
     --border-navbar-bottom: rgba(0, 0, 0, 0.07);
     --border-section-heading-underline: var(--color-accent-primary);
+    --border-form-input: var(--color-border-subtle);
+    --border-form-input-focus: var(--color-accent-primary);
 
     --shadow-card: rgba(100, 100, 100, 0.08);
     --shadow-card-hover: rgba(100, 100, 100, 0.15);
     --shadow-navbar: rgba(0, 0, 0, 0.05);
-    --shadow-home-text: rgba(0, 0, 0, 0.4);
-    --shadow-home-subtitle-text: rgba(0, 0, 0, 0.6);
+    --shadow-header-text: rgba(0, 0, 0, 0.4);
+    --shadow-header-subtitle-text: rgba(0, 0, 0, 0.6);
     --shadow-offer-badge: rgba(0, 0, 0, 0.2);
 
     --image-filter-default: none;
+    
+    --ce-canvas-rgb: 255, 255, 255;
+    --ce-text-color: #FFF;
+    --ce-input-bg-color: rgba(var(--ce-canvas-rgb), 0.2);
+    --ce-input-border-color: rgba(var(--ce-canvas-rgb), 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        /* 1. Dark Mode Palette */
         --color-accent-primary: #81A8A7;
         --color-accent-primary-hover: #95BDBB;
         --color-accent-secondary: #D7B99D;
@@ -90,7 +98,6 @@ Contact Us: https://www.maxim.pe.kr
         --color-text-on-accent: #1F1D1B;
         --color-background-dark: #1F1D1B;
 
-        /* 2. Dark Mode Component Mapping */
         --bg-primary: var(--color-surface-secondary);
         --bg-secondary: var(--color-surface-primary);
         --bg-navbar-animated: linear-gradient(45deg, #1f1d1b, #2c2a28, #1f1d1b, #413e3b);
@@ -103,11 +110,13 @@ Contact Us: https://www.maxim.pe.kr
         --bg-nav-icon-button-hover: var(--color-accent-primary-hover);
         --bg-to-top-button: rgba(129, 168, 167, 0.7);
         --bg-to-top-button-hover: rgba(129, 168, 167, 0.9);
-        --bg-home-overlay: rgba(0, 0, 0, 0.5);
-        --bg-cta-button: var(--color-accent-primary);
-        --bg-cta-button-hover: var(--color-accent-primary-hover);
+        --bg-overlay: rgba(0, 0, 0, 0.5);
+        --bg-button: var(--color-accent-primary);
+        --bg-button-hover: var(--color-accent-primary-hover);
         --bg-price-info: rgba(31, 29, 27, 0.5);
         --bg-offer-badge: var(--color-accent-secondary);
+        --bg-form-input: var(--color-surface-primary);
+        --bg-form-input-focus: var(--color-surface-secondary);
         
         --text-primary: var(--color-text-default);
         --text-secondary: var(--color-text-soft);
@@ -120,37 +129,43 @@ Contact Us: https://www.maxim.pe.kr
         --text-lang-switcher-active: var(--color-text-on-accent);
         --text-nav-icon-button: var(--color-text-on-accent);
         --text-to-top-button: var(--color-text-on-accent);
-        --text-cta-button: var(--color-text-on-accent);
+        --text-button: var(--color-text-on-accent);
         --text-offer-badge: var(--color-background-dark);
         --price-value-setup-color: var(--color-accent-secondary);
         --text-job-title: var(--color-text-meta);
+        --text-form-input: var(--color-text-strong);
+        --text-form-placeholder: var(--color-text-soft);
 
         --border-card: var(--color-border-subtle);
         --border-navbar-bottom: rgba(255, 255, 255, 0.09);
         --border-section-heading-underline: var(--color-accent-primary);
+        --border-form-input: var(--color-border-subtle);
+        --border-form-input-focus: var(--color-accent-primary);
         
         --shadow-card: rgba(0, 0, 0, 0.3);
         --shadow-card-hover: rgba(0, 0, 0, 0.4);
         --shadow-navbar: rgba(0, 0, 0, 0.3);
         
         --image-filter-default: brightness(0.85);
+        
+        --ce-canvas-rgb: 255, 255, 255;
     }
 }
 
-#home .content h1 {
+.pe-header__content .pe-header__title {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 300;
     letter-spacing: 0.2em;
     margin-left: 0.2em;
     text-transform: capitalize;
-    color: #FFFFFF; /* 항상 밝은 색상으로 고정 */
-    text-shadow: 2px 2px 8px var(--shadow-home-text);
+    color: #FFFFFF;
+    text-shadow: 2px 2px 8px var(--shadow-header-text);
     font-size: clamp(3.5rem, 2rem + 8vw, 10rem);
 }
 
-#home .content .subtitle {
+.pe-header__content .pe-header__subtitle {
     font-size: 1.3rem;
-    color: #FFFFFF; /* h1과 통일성을 위해 밝은 색상으로 고정 */
+    color: #FFFFFF;
 }
 
 .review-from {
@@ -160,8 +175,7 @@ Contact Us: https://www.maxim.pe.kr
     color: var(--text-job-title);
 }
 
-#interviews .ui-card-description,
-#greeting .ui-card-description {
+#interviews .pe-card__description {
     font-style: italic;
     font-size: 1rem;
     color: var(--text-default);
@@ -173,48 +187,21 @@ Contact Us: https://www.maxim.pe.kr
     position: relative;
 }
 
-#greeting .ui-card {
-    border: none;
-    background: none;
-    box-shadow: none;
-}
-#greeting .ui-card:hover {
-    transform: none;
-}
-
-
-.price-value.setup {
+.pe-price-info__value.setup {
     color: var(--price-value-setup-color);
 }
 
-#interviews .ui-card {
+#interviews .pe-card {
     display: flex;
     flex-direction: column;
 }
 
-#interviews .ui-card .ui-card-content {
+#interviews .pe-card .pe-card__content {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
-#interviews .ui-card .ui-card-content audio {
+#interviews .pe-card .pe-card__content audio {
     margin-top: auto;
-}
-
-.ui-card-content .ui-benefit-list {
-    text-align: left;
-    margin-top: 20px;
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-}
-
-/* --- Floating Light Particles Background --- */
-#particle-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
 }
