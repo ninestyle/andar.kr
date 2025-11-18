@@ -15,7 +15,8 @@ const siteConfig = {
     canvas_overlay: 'dotted',
 
     icon_buttons: [
-        { name: 'Profile', icon: 'mail', url: '#profile' }
+        { name: 'Profile', icon: 'mail', url: '#profile' },
+        { name: 'Request', icon: 'auto_awesome', url: '#request' }
     ],
 
     TURNSTILE_SITE_KEY: '0x4AAAAAACBUaQ2J0vXkPSAt'
