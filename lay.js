@@ -9,6 +9,7 @@ const siteConfig = {
     canvas_effect: 'starsEffect',
     canvas_image_type: 'cover',
     canvas_image_count: 3,
+    canvas_image_path: './section/home/',
     canvas_image_format: 'jpg',
     canvas_indicators: true,
     canvas_overlay: 'dotted',
