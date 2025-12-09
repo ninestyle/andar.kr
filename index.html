@@ -1,9 +1,9 @@
 <!--
-    Version: 3.0.0 (V3 Refactored)
-    Framework: Page Express V3 (Tier 2) + Express Core (Tier 1)
-    Last Modified: 2025-11-23
-    Author: Maxim
-    Theme: ANDAR - Aroma & Spa
+    Version: Express 4.0
+    Last Modified: 2025-12-09 18:30 (KST)
+    File Name: index.html
+    Project Name: ANDAR
+    Support: maxim.pe.kr/contact
     License: © 2025 Maxim. All Rights Reserved.
 -->
 <!DOCTYPE html>
@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO & Metadata (Standardized Key: site_title) -->
+    <!-- SEO & Metadata -->
     <title data-lang="site_title">ANDAR - 아로마 & 스파</title>
     <meta name="description" data-lang="meta_description" content="온전한 휴식과 치유의 공간. 안다르 아로마 & 스파는 자연의 향기와 전문가의 손길로 지친 몸과 마음에 깊은 평온을 선사합니다.">
     <meta name="keywords" content="아로마테라피, 스파, 마사지, 힐링, 웰니스, 릴렉세이션, 안다르, ANDAR, 아유르베다">
@@ -23,26 +23,25 @@
     <meta property="og:url" content="https://www.andar.kr">
     <meta property="og:title" data-lang="og_title" content="ANDAR - 아로마 & 스파">
     <meta property="og:description" data-lang="og_description" content="온전한 휴식과 치유의 공간. 안다르 아로마 & 스파는 자연의 향기와 전문가의 손길로 지친 몸과 마음에 깊은 평온을 선사합니다.">
-    <meta property="og:image" content="https://www.andar.kr/section/home/1.jpg">
+    <meta property="og:image" content="./section/home/1.jpg">
     <meta property="og:site_name" content="ANDAR">
 
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-
-    <!-- Fonts -->
+    <!-- 1. Assets (Icons & Fonts) -->
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- [Tier 1] Express Core V3 -->
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/express-v3.css">
-    <script src="https://cdn.dam.so/_inc/express/express-v3.js"></script>
+    <!-- 2. Tier 1 Facility (Core) -->
+    <link rel="stylesheet" href="./express/express-v4.css">
+    <script src="./express/express-v4.js"></script>
 
-    <!-- [Tier 2] Page Express V3 -->
-    <link rel="stylesheet" href="https://cdn.dam.so/_inc/express/page-v3.css">
-    <script src="https://cdn.dam.so/_inc/express/page-v3.js"></script>
+    <!-- 3. Tier 2 Space (Page Framework) -->
+    <link rel="stylesheet" href="./express/page-v4.css">
+    <script src="./express/page-v4.js"></script>
 
-    <!-- [Tier 3] User Theme -->
+    <!-- 4. Tier 3 Interior (User Custom) -->
     <link rel="stylesheet" href="./lay.css">
     <script src="./lay.js" defer></script>
 
@@ -113,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Demo Message (Core Data) -->
+                <!-- Demo Msg (Essential) -->
                 <p class="pe-demo-msg" data-lang="ex_demo_msg_overview"></p>
             </div>
         </section>
@@ -340,7 +339,7 @@
             </div>
         </section>
 
-        <!-- Profile -->
+        <!-- Profile (Always Last) -->
         <section id="profile" class="pe-section pe-section--secondary js-fade-in">
             <div class="pe-container">
                 <h2><span translate="no" class="material-symbols-outlined notranslate">contact_mail</span><span data-lang="profile_title"></span></h2>
@@ -360,64 +359,18 @@
                         <span data-lang="profile_button"></span>
                     </a>
                 </div>
-                <!-- Demo Message (Core Data) -->
+                <!-- Demo Msg (Essential) -->
                 <p class="pe-demo-msg" data-lang="ex_demo_msg_profile"></p>
             </div>
         </section>
 
-        <!-- Contact Form (Demo Mode) -->
-        <section id="contact" class="pe-section js-fade-in">
-            <div class="pe-container">
-                <h2>
-                    <span translate="no" class="material-symbols-outlined notranslate">mail</span>
-                    <span data-lang="ex_contact_title">문의하기</span>
-                </h2>
-                <p class="pe-section__description" data-lang="ex_contact_desc">담당자가 확인 후 이메일 회신 드립니다.</p>
-
-                <!-- data-demo-mode="true" enables fake response -->
-                <form class="pe-form pe-contact-form" autocomplete="off" data-demo-mode="true">
-                    <input type="email" name="email" required class="pe-form__input" data-lang-placeholder="ex_placeholder_email" placeholder="Email">
-                    <div class="pe-form__textarea-wrapper">
-                        <textarea name="message" rows="5" required maxlength="1024" class="pe-form__textarea" data-lang-placeholder="ex_placeholder_msg" placeholder="Message"></textarea>
-                        <div class="pe-form__char-counter">0/1024</div>
-                    </div>
-                    <button type="submit" class="pe-form__submit">
-                        <!-- V3 Standard: Use 'ex_btn_submit' key -->
-                        <span class="pe-form__text" data-lang="ex_btn_submit">보내기</span>
-                    </button>
-                    <div class="pe-form__status"></div>
-                </form>
-            </div>
-        </section>
-
-        <!-- Search Form (Demo Mode) -->
-        <section id="search" class="pe-section pe-section--secondary js-fade-in">
-            <div class="pe-container">
-                <h2>
-                    <span translate="no" class="material-symbols-outlined notranslate">search</span>
-                    <span data-lang="ex_search_title">검색</span>
-                </h2>
-                <p class="pe-section__description" data-lang="ex_search_desc">사이트 내에서 필요한 정보를 찾아보세요.</p>
-
-                <form class="pe-form pe-search-form" autocomplete="off" data-demo-mode="true">
-                    <input type="text" name="key" required class="pe-form__input" data-lang-placeholder="ex_placeholder_search" placeholder="Search...">
-                    <button type="submit" class="pe-form__submit">
-                        <span class="pe-form__text" data-lang="ex_btn_search">검색</span>
-                    </button>
-                    <div class="pe-form__status"></div>
-                </form>
-            </div>
-        </section>
-
-        <!-- Request (Core Standard) -->
+        <!-- Demo Request (Moved to Last) -->
         <section id="demo" class="pe-section js-fade-in">
             <div class="pe-container">
-                <h2 data-lang="ex_demo_title">제작 문의</h2>
-                <p class="pe-section__description" data-lang="ex_demo_desc">보고 계신 사이트처럼 제작해 드립니다.</p>
+                <h2><span translate="no" class="material-symbols-outlined notranslate">auto_awesome</span><span data-lang="ex_demo_title"></span></h2>
+                <p class="pe-section__description" data-lang="ex_demo_desc"></p>
                 <div class="pe-button-group">
-                    <a href="#" class="pe-button" data-lang="ex_demo_button" data-lang-href="ex_demo_button_url" rel="noopener noreferrer">
-                        문의하기
-                    </a>
+                    <a href="#" class="pe-button" data-lang="ex_demo_button" data-lang-href="ex_demo_button_url" rel="noopener noreferrer"></a>
                 </div>
             </div>
         </section>
@@ -426,9 +379,8 @@
     <!-- Footer -->
     <footer class="pe-footer">
         <div class="pe-container">
-            <!-- V3 Standard: Use 'ex_copyright_text' from Core -->
             <p class="render-as-html" data-lang="ex_copyright_text"></p>
-            <a data-lang-href="footer_credit_url" rel="noopener noreferrer" data-lang="footer_credit_text">Powered by</a>
+            <a data-lang-href="ex_footer_credit_url" rel="noopener noreferrer" data-lang="ex_footer_credit_text">Powered by Maxim</a>
         </div>
     </footer>
 

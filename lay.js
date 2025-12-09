@@ -1,40 +1,65 @@
 /*
-    Version: 3.0.0 (V3 Refactored)
-    Framework: User Configuration (Tier 3)
-    Last Modified: 2025-11-23
-    Author: Maxim
+    Version: Express 4.0
+    Last Modified: 2025-12-09 18:30 (KST)
+    File Name: lay.js
+    Project Name: ANDAR
     Theme: ANDAR - Aroma & Spa
 */
 
 const siteConfig = {
-    // [기본 설정]
+    // ------------------------------------------------
+    // 1. [Tier 1] Core Essentials
+    // ------------------------------------------------
     language: 'ko',
+    theme_color: '#5A7D7C', // Andar Accent Color
+    
+    // [API Strategy] Demo Mode Active
+    demo_mode: true,
 
-    // [캔버스 헤더 설정]
+    // ------------------------------------------------
+    // 2. [Tier 2] Visual Engine & Canvas
+    // ------------------------------------------------
+    canvas_target: '#home',
+    canvas_mode: 'lite',
+    
+    // Custom Effect Injection (Defined below)
     canvas_effect: 'starsEffect',
-    canvas_image_type: 'cover',
-    canvas_image_path: './section/home/',
-    canvas_image_count: 3,
-    canvas_image_format: 'jpg',
-    canvas_image_slide: 10,
-    canvas_indicators: true,
+    
+    // Canvas Options
     canvas_overlay: 'dotted',
+    canvas_image_type: 'cover',
+    canvas_image_count: 3,
+    canvas_image_slide: 10,
+    canvas_image_path: './section/home/',
+    canvas_image_format: 'jpg',
 
-    // [아이콘 버튼] Profile 및 Request 섹션 연결
+    // ------------------------------------------------
+    // 3. [Tier 2] Interaction & Dynamics
+    // ------------------------------------------------
     icon_buttons: [
         { name: 'Profile', icon: 'mail', url: '#profile' },
-        { name: 'Request', icon: 'auto_awesome', url: '#request' }
-    ]
-    
-    // [API 설정] Demo Mode이므로 API Path 및 Turnstile Key 불필요
+        { name: 'Request', icon: 'auto_awesome', url: '#demo' }
+    ],
+
+    scroll_smooth: true,
+    nav_active_class: 'active'
 };
 
-// [커스텀 이펙트] 별 내리는 효과 (V3 Migration)
+// [Custom Effect] Stars Effect (Migrated from V3)
 const starsEffect = {
     init: (headerElement) => {
         const canvas = document.createElement('canvas');
         canvas.id = 'ce-bg-canvas';
         canvas.style.mixBlendMode = 'screen';
+        
+        // V4: Ensure canvas is absolutely positioned within the container
+        canvas.style.position = 'absolute';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
+        canvas.style.zIndex = '1'; // Above Image, Below Content
+
         headerElement.prepend(canvas);
 
         const ctx = canvas.getContext('2d');
@@ -100,12 +125,14 @@ const starsEffect = {
     }
 };
 
-// V3 Initialization
+// V4 Initialization
 document.addEventListener('DOMContentLoaded', () => {
-    if (typeof PE_V3 !== 'undefined') {
-        PE_V3.registerEffect('starsEffect', starsEffect);
-        PE_V3.init(siteConfig);
+    if (typeof PE_V4 !== 'undefined') {
+        // Register custom effect before init
+        PE_V4.init(siteConfig).then(engine => {
+             engine.registerEffect('starsEffect', starsEffect.init);
+        });
     } else {
-        console.error("Page Express V3 libraries not loaded.");
+        console.error("Express V4 Libraries not loaded.");
     }
 });
