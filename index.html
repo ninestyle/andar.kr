@@ -246,18 +246,20 @@
                 <h2><span translate="no" class="material-symbols-outlined notranslate">format_quote</span><span data-lang="interviews_title"></span></h2>
                 <p class="pe-section__description" data-lang="interviews_desc"></p>
                 
-                <!-- CEO Interview (Full Width) -->
+                <!-- CEO Interview (Full Width, Standard Card) -->
                 <div class="pe-grid pe-grid--cols-1" style="margin-bottom: 30px;">
-                    <div class="pe-card pe-card--horizontal">
-                        <div class="pe-card__image-wrapper" style="flex: 0 0 60%;">
-                            <video class="pe-card__video" controls poster="./section/interviews/ceo.jpg" style="width:100%; height:100%; object-fit:cover;">
+                    <div class="pe-card">
+                        <!-- Video without wrapper for full control or consistent height -->
+                        <div class="pe-card__image-wrapper" style="height: auto; min-height: 300px;">
+                            <video class="pe-card__video" controls poster="./section/interviews/ceo.jpg" style="width:100%; height:100%; object-fit:cover; display: block;">
                                 <source src="./section/interviews/ceo.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                         </div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="interview_ceo_name"></h3>
-                            <span class="pe-card__tag" data-lang="interview_ceo_job"></span>
+                            <!-- Centered Tag -->
+                            <span class="pe-card__tag" data-lang="interview_ceo_job" style="align-self: center;"></span>
                             <p class="pe-card__description" data-lang="interview_ceo_script"></p>
                         </div>
                     </div>
@@ -272,7 +274,8 @@
                         </div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="interview_01_name"></h3>
-                            <span class="pe-card__tag" data-lang="interview_01_job"></span>
+                            <!-- Centered Tag -->
+                            <span class="pe-card__tag" data-lang="interview_01_job" style="align-self: center;"></span>
                             <div class="pe-audio-wrapper" style="margin: 15px 0;">
                                 <audio controls style="width: 100%; height: 32px;">
                                     <source src="./section/interviews/01.mp4" type="audio/mp4">
@@ -289,7 +292,8 @@
                         </div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="interview_02_name"></h3>
-                            <span class="pe-card__tag" data-lang="interview_02_job"></span>
+                            <!-- Centered Tag -->
+                            <span class="pe-card__tag" data-lang="interview_02_job" style="align-self: center;"></span>
                             <div class="pe-audio-wrapper" style="margin: 15px 0;">
                                 <audio controls style="width: 100%; height: 32px;">
                                     <source src="./section/interviews/02.mp4" type="audio/mp4">
