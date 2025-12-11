@@ -1,6 +1,6 @@
 <!--
     Version: Express 4.0
-    Last Modified: 2025-12-09 18:30 (KST)
+    Last Modified: 2025-12-11 20:10 (KST)
     File Name: index.html
     Project Name: ANDAR
     Support: maxim.pe.kr/contact
@@ -15,70 +15,40 @@
     <!-- SEO & Metadata -->
     <title data-lang="site_title">ANDAR - 아로마 & 스파</title>
     <meta name="description" data-lang="meta_description" content="온전한 휴식과 치유의 공간. 안다르 아로마 & 스파는 자연의 향기와 전문가의 손길로 지친 몸과 마음에 깊은 평온을 선사합니다.">
-    <meta name="keywords" content="아로마테라피, 스파, 마사지, 힐링, 웰니스, 릴렉세이션, 안다르, ANDAR, 아유르베다">
+    <meta name="keywords" content="아로마테라피, 스파, 마사지, 힐링, 웰니스, 릴렉세이션, 안다르, ANDAR">
     <link rel="canonical" href="https://www.andar.kr/">
-
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.andar.kr">
     <meta property="og:title" data-lang="og_title" content="ANDAR - 아로마 & 스파">
     <meta property="og:description" data-lang="og_description" content="온전한 휴식과 치유의 공간. 안다르 아로마 & 스파는 자연의 향기와 전문가의 손길로 지친 몸과 마음에 깊은 평온을 선사합니다.">
-    <meta property="og:image" content="./section/home/1.jpg">
-    <meta property="og:site_name" content="ANDAR">
+    <meta property="og:image" content="./images/namecard.png">
 
-    <!-- 1. Assets (Icons & Fonts) -->
-    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Noto+Sans+KR:wght@300;400;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/favicon.ico">
+
+    <!-- Fonts: Noto Sans KR (Body) & Cormorant Garamond (Titles - Spa Vibe) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
-    <!-- 2. Tier 1 Facility (Core) -->
-    <link rel="stylesheet" href="./express/express-v4.css">
-    <script src="./express/express-v4.js"></script>
+    <!-- Tier 1: Core Facility -->
+    <link rel="stylesheet" href="https://cdn.sigonggan.com/_inc/express/v4/express-v4.css">
+    <script src="https://cdn.sigonggan.com/_inc/express/v4/express-v4.js"></script>
 
-    <!-- 3. Tier 2 Space (Page Framework) -->
-    <link rel="stylesheet" href="./express/page-v4.css">
-    <script src="./express/page-v4.js"></script>
+    <!-- Tier 2: Space Framework (Page Express) -->
+    <link rel="stylesheet" href="https://cdn.sigonggan.com/_inc/express/v4/express/page-v4.css">
+    <script src="https://cdn.sigonggan.com/_inc/express/v4/express/page-v4.js"></script>
 
-    <!-- 4. Tier 3 Interior (User Custom) -->
+    <!-- Tier 3: Interior (User Custom) -->
     <link rel="stylesheet" href="./lay.css">
     <script src="./lay.js" defer></script>
-
-    <!-- Schema.org -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      "name": "ANDAR Aroma & Spa",
-      "image": "https://www.andar.kr/section/home/1.jpg",
-      "description": "단순한 스파를 넘어, 안다르는 자연의 순수한 에너지와 아로마테라피를 결합하여 몸과 마음의 균형을 되찾아주는 프리미엄 웰니스 공간입니다.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "456 North Camden Drive",
-        "addressLocality": "Beverly Hills",
-        "addressRegion": "CA",
-        "postalCode": "90210",
-        "addressCountry": "USA"
-      },
-      "url": "https://www.andar.kr/",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "andar@andar.kr",
-        "contactType": "customer service"
-      }
-    }
-    </script>
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Nav -->
     <nav class="pe-nav">
         <div class="pe-nav__container">
             <a href="#home" class="pe-nav__logo" data-lang="logo_text">ANDAR</a>
             <div class="pe-nav__buttons">
                 <div id="lang-switcher">
-                    <button data-lang-set="en">EN</button>
                     <button data-lang-set="ko" class="active">KO</button>
+                    <button data-lang-set="en">EN</button>
                 </div>
             </div>
         </div>
@@ -87,17 +57,20 @@
     <!-- Header -->
     <header id="home" class="pe-header">
         <div class="pe-header__content js-parallax-content">
-            <h1 class="pe-header__title">ANDAR</h1>
-            <p class="pe-header__subtitle" data-lang="home_subtitle"></p>
+            <h1 class="pe-header__title home-logo">ANDAR</h1>
+            <p class="pe-header__subtitle" data-lang="home_subtitle">자연의 숨결 속, 진정한 나를 만나는 시간</p>
         </div>
     </header>
 
     <main>
-        <!-- Overview -->
-        <section id="overview" class="pe-section js-fade-in">
-            <div class="pe-container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">spa</span><span data-lang="overview_title">소개</span></h2>
-                <p class="pe-section__description" data-lang="overview_desc">안다르는 자연의 순수함으로 몸과 마음의 균형을 되찾아주는 웰니스 공간입니다.</p>
+        <!-- 1. Overview -->
+        <section id="overview" class="pe-section">
+            <div class="pe-container js-fade-in">
+                <h2>
+                    <span translate="no" class="material-symbols-outlined notranslate">spa</span>
+                    <span data-lang="overview_title">소개</span>
+                </h2>
+                <p class="pe-section__description" data-lang="overview_desc"></p>
                 <div class="pe-grid pe-grid--cols-2">
                     <div class="pe-card">
                         <div class="pe-card__content">
@@ -112,21 +85,20 @@
                         </div>
                     </div>
                 </div>
-                <!-- Demo Msg (Essential) -->
                 <p class="pe-demo-msg" data-lang="ex_demo_msg_overview"></p>
             </div>
         </section>
 
-        <!-- Services -->
-        <section id="services" class="pe-section js-fade-in">
-            <div class="pe-container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">local_florist</span><span data-lang="services_title"></span></h2>
+        <!-- 2. Services (Grid Layout as requested) -->
+        <section id="services" class="pe-section section-divider to-secondary">
+            <div class="pe-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">self_improvement</span><span data-lang="services_title"></span></h2>
                 <p class="pe-section__description" data-lang="services_desc"></p>
-                <div class="pe-grid">
+                
+                <div class="pe-grid pe-grid--cols-3">
+                    <!-- Service 01 -->
                     <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/01.jpg" alt="아로마 시그니처 마사지" class="pe-card__image">
-                        </div>
+                        <div class="pe-card__image-wrapper js-lightbox-trigger"><img src="./section/services/01.jpg" alt="Service 01" class="pe-card__image"></div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="services_01_title"></h3>
                             <p class="pe-card__description" data-lang="services_01_desc"></p>
@@ -139,51 +111,50 @@
                             </div>
                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="services_01_price_2_label"></span>
-                                <span class="pe-price-info__value setup" data-lang="services_01_price_2_value"></span>
+                                <span class="pe-price-info__value" data-lang="services_01_price_2_value"></span>
                             </div>
                         </div>
                     </div>
+                    <!-- Service 02 -->
                     <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/02.jpg" alt="딥티슈 테라피" class="pe-card__image">
-                        </div>
+                        <div class="pe-card__image-wrapper js-lightbox-trigger"><img src="./section/services/02.jpg" alt="Service 02" class="pe-card__image"></div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="services_02_title"></h3>
                             <p class="pe-card__description" data-lang="services_02_desc"></p>
                             <div class="pe-product-list" data-content-type="product" data-prefix="services_02_detail" data-dynamic-area></div>
                         </div>
                         <div class="pe-price-info">
-                            <div class="pe-price-info__item">
+                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="services_02_price_1_label"></span>
                                 <span class="pe-price-info__value" data-lang="services_02_price_1_value"></span>
                             </div>
                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="services_02_price_2_label"></span>
-                                <span class="pe-price-info__value setup" data-lang="services_02_price_2_value"></span>
+                                <span class="pe-price-info__value" data-lang="services_02_price_2_value"></span>
                             </div>
                         </div>
                     </div>
+                    <!-- Service 03 -->
                     <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/services/03.jpg" alt="세레니티 페이셜" class="pe-card__image">
-                        </div>
+                        <div class="pe-card__image-wrapper js-lightbox-trigger"><img src="./section/services/03.jpg" alt="Service 03" class="pe-card__image"></div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="services_03_title"></h3>
                             <p class="pe-card__description" data-lang="services_03_desc"></p>
                             <div class="pe-product-list" data-content-type="product" data-prefix="services_03_detail" data-dynamic-area></div>
                         </div>
                         <div class="pe-price-info">
-                            <div class="pe-price-info__item">
+                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="services_03_price_1_label"></span>
                                 <span class="pe-price-info__value" data-lang="services_03_price_1_value"></span>
                             </div>
                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="services_03_price_2_label"></span>
-                                <span class="pe-price-info__value setup" data-lang="services_03_price_2_value"></span>
+                                <span class="pe-price-info__value" data-lang="services_03_price_2_value"></span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="pe-faq-container">
                     <h3 class="pe-faq-title" data-lang="services_faq_title">FAQ</h3>
                     <div class="pe-faq-list" data-content-type="faq" data-prefix="services_faq_item" data-dynamic-area></div>
@@ -191,73 +162,57 @@
             </div>
         </section>
 
-        <!-- Products -->
-        <section id="products" class="pe-section js-fade-in">
-            <div class="pe-container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">grass</span><span data-lang="products_title"></span></h2>
+        <!-- 3. Products (Grid Layout - Standard) -->
+        <section id="products" class="pe-section section-divider to-primary">
+            <div class="pe-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">soap</span><span data-lang="products_title"></span></h2>
                 <p class="pe-section__description" data-lang="products_desc"></p>
-                <div class="pe-grid">
+                
+                <div class="pe-grid pe-grid--cols-3">
                     <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/products/01.jpg" alt="라벤더 블리스 오일" class="pe-card__image">
-                        </div>
+                        <div class="pe-card__image-wrapper js-lightbox-trigger"><img src="./section/products/01.jpg" alt="Product 01" class="pe-card__image"></div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="products_01_title"></h3>
                             <p class="pe-card__description" data-lang="products_01_desc"></p>
                             <div class="pe-product-list" data-content-type="product" data-prefix="products_01_detail" data-dynamic-area></div>
                         </div>
-                        <div class="pe-price-info">
-                            <div class="pe-price-info__item">
+                         <div class="pe-price-info">
+                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="products_01_price_1_label"></span>
                                 <span class="pe-price-info__value" data-lang="products_01_price_1_value"></span>
                             </div>
-                            <div class="pe-price-info__item">
-                                <span class="pe-price-info__label" data-lang="products_01_price_2_label"></span>
-                                <span class="pe-price-info__value setup" data-lang="products_01_price_2_value"></span>
-                            </div>
                         </div>
                     </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/products/02.jpg" alt="유칼립투스 솔트 스크럽" class="pe-card__image">
-                        </div>
+                     <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger"><img src="./section/products/02.jpg" alt="Product 02" class="pe-card__image"></div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="products_02_title"></h3>
                             <p class="pe-card__description" data-lang="products_02_desc"></p>
-                             <div class="pe-product-list" data-content-type="product" data-prefix="products_02_detail" data-dynamic-area></div>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="products_02_detail" data-dynamic-area></div>
                         </div>
                          <div class="pe-price-info">
-                            <div class="pe-price-info__item">
+                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="products_02_price_1_label"></span>
                                 <span class="pe-price-info__value" data-lang="products_02_price_1_value"></span>
                             </div>
-                            <div class="pe-price-info__item">
-                                <span class="pe-price-info__label" data-lang="products_02_price_2_label"></span>
-                                <span class="pe-price-info__value setup" data-lang="products_02_price_2_value"></span>
-                            </div>
                         </div>
                     </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper js-lightbox-trigger">
-                            <img src="./section/products/03.jpg" alt="캐모마일 카밍 미스트" class="pe-card__image">
-                        </div>
+                     <div class="pe-card">
+                        <div class="pe-card__image-wrapper js-lightbox-trigger"><img src="./section/products/03.jpg" alt="Product 03" class="pe-card__image"></div>
                         <div class="pe-card__content">
                             <h3 class="pe-card__title" data-lang="products_03_title"></h3>
                             <p class="pe-card__description" data-lang="products_03_desc"></p>
-                             <div class="pe-product-list" data-content-type="product" data-prefix="products_03_detail" data-dynamic-area></div>
+                            <div class="pe-product-list" data-content-type="product" data-prefix="products_03_detail" data-dynamic-area></div>
                         </div>
                          <div class="pe-price-info">
-                            <div class="pe-price-info__item">
+                             <div class="pe-price-info__item">
                                 <span class="pe-price-info__label" data-lang="products_03_price_1_label"></span>
                                 <span class="pe-price-info__value" data-lang="products_03_price_1_value"></span>
-                            </div>
-                            <div class="pe-price-info__item">
-                                <span class="pe-price-info__label" data-lang="products_03_price_2_label"></span>
-                                <span class="pe-price-info__value setup" data-lang="products_03_price_2_value"></span>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="pe-faq-container">
                     <h3 class="pe-faq-title" data-lang="products_faq_title">FAQ</h3>
                     <div class="pe-faq-list" data-content-type="faq" data-prefix="products_faq_item" data-dynamic-area></div>
@@ -265,106 +220,91 @@
             </div>
         </section>
 
-        <!-- Promotion -->
-        <section id="promotion" class="pe-section js-fade-in">
-            <div class="pe-container">
-                 <div class="pe-grid pe-grid--cols-1">
-                     <div class="pe-card pe-card--horizontal">
-                         <div class="pe-card__image-wrapper">
-                             <img src="./section/promotion/01.jpg" alt="이벤트 홍보 이미지" class="pe-card__image">
-                         </div>
-                         <div class="pe-card__content">
-                             <span class="pe-card__tag" data-lang="promotion_tag_discount">Event</span>
-                             <h3 class="pe-card__title" data-lang="promotion_01_title"></h3>
-                             <p class="pe-card__description" data-lang="promotion_01_desc"></p>
-                             <div data-content-type="affiliate-benefits" data-prefix="promotion_01_benefit" data-dynamic-area>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-            </div>
-        </section>
-
-        <!-- Interviews -->
-        <section id="interviews" class="pe-section js-fade-in">
-            <div class="pe-container">
-                <h2><span translate="no" class="material-symbols-outlined notranslate">star</span><span data-lang="interviews_title"></span></h2>
-                <p class="pe-section__description" data-lang="interviews_desc"></p>
-
-                <div class="pe-grid pe-grid--cols-2">
-                    <div class="pe-card">
+        <!-- 4. Promotion (Parallax) -->
+        <section id="promotion" class="pe-section pe-section--parallax" style="background-image: url('./section/promotion/bg.jpg');">
+            <div class="pe-overlay pe-overlay--dotted"></div>
+            <div class="pe-container js-fade-in">
+                <div class="pe-grid pe-grid--cols-1">
+                    <div class="pe-card pe-card--horizontal">
                         <div class="pe-card__image-wrapper">
-                            <img src="./section/interviews/01.jpg" alt="Sarah" class="pe-card__image">
+                            <img src="./section/promotion/01.jpg" alt="Promotion" class="pe-card__image">
                         </div>
                         <div class="pe-card__content">
-                            <h3 class="pe-card__title"><span data-lang="interview_01_name"></span><span class="review-from" data-lang="interview_01_job"></span></h3>
-                            <p class="pe-card__description" data-lang="interview_01_script"></p>
-                            <audio controls src="./section/interviews/01.mp4"></audio>
-                        </div>
-                    </div>
-                    <div class="pe-card">
-                        <div class="pe-card__image-wrapper">
-                            <img src="./section/interviews/02.jpg" alt="Emily" class="pe-card__image">
-                        </div>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title"><span data-lang="interview_02_name"></span><span class="review-from" data-lang="interview_02_job"></span></h3>
-                            <p class="pe-card__description" data-lang="interview_02_script"></p>
-                            <audio controls src="./section/interviews/02.mp4"></audio>
+                            <span class="pe-card__tag" data-lang="promotion_tag_discount"></span>
+                            <h3 class="pe-card__title" data-lang="promotion_01_title"></h3>
+                            <p class="pe-card__description" data-lang="promotion_01_desc"></p>
+                             <div class="pe-product-list" data-content-type="product" data-prefix="promotion_01_benefit" data-dynamic-area></div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="pe-grid pe-grid--cols-1" style="margin-top: 30px;">
+        <!-- 5. Interviews -->
+        <section id="interviews" class="pe-section section-divider to-secondary">
+            <div class="pe-container js-fade-in">
+                <h2><span translate="no" class="material-symbols-outlined notranslate">format_quote</span><span data-lang="interviews_title"></span></h2>
+                <p class="pe-section__description" data-lang="interviews_desc"></p>
+                <div class="pe-grid pe-grid--cols-2">
                     <div class="pe-card">
-                        <video class="pe-card__video" title="CEO Interview" poster="./section/interviews/ceo.jpg" src="./section/interviews/ceo.mp4" controls></video>
-                        <div class="pe-card__content">
-                            <h3 class="pe-card__title"><span data-lang="interview_ceo_name"></span><span class="review-from" data-lang="interview_ceo_job"></span></h3>
+                         <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="interview_ceo_name"></h3>
+                            <span class="pe-card__tag" data-lang="interview_ceo_job"></span>
                             <p class="pe-card__description" data-lang="interview_ceo_script"></p>
                         </div>
                     </div>
+                    <div class="pe-card">
+                         <div class="pe-card__content">
+                            <h3 class="pe-card__title" data-lang="interview_01_name"></h3>
+                            <span class="pe-card__tag" data-lang="interview_01_job"></span>
+                            <p class="pe-card__description" data-lang="interview_01_script"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Location -->
-        <section id="location" class="pe-section js-fade-in">
-            <div class="pe-container">
+        <!-- 6. Location -->
+        <section id="location" class="pe-section section-divider to-primary">
+            <div class="pe-container js-fade-in">
                 <h2><span translate="no" class="material-symbols-outlined notranslate">location_on</span><span data-lang="location_title"></span></h2>
-                <div class="pe-map-wrapper">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.992597534896!2d-118.4073382229352!3d34.06970401680599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc080a5045b9%3A0x22436f8086bbdb58!2s456%20N%20Camden%20Dr%2C%20Beverly%20Hills%2C%20CA%2090210%20%EB%AF%B8%EA%B5%AD!5e0!3m2!1sko!2skr!4v1751444317283!5m2!1sko!2skr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="pe-card">
+                    <!-- Google Map Embed Placeholder -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.689154412275!2d-118.2562447889396!3d34.05199927304996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c64848905333%3A0x4549452dfa14a635!2sU.S.%20Bank%20Tower!5e0!3m2!1sko!2skr!4v1719957863588!5m2!1sko!2skr" width="100%" height="450" class="pe-card__map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="pe-address-block">
+                <div class="pe-address-block" style="margin-top:20px;">
                     <p><strong data-lang="location_label_address"></strong> <span data-lang="address_text"></span></p>
                 </div>
             </div>
         </section>
 
-        <!-- Profile (Always Last) -->
-        <section id="profile" class="pe-section pe-section--secondary js-fade-in">
-            <div class="pe-container">
+        <!-- 7. Profile (Standardized Class: pe-profile-list) -->
+        <section id="profile" class="pe-section section-divider to-secondary">
+            <div class="pe-container js-fade-in">
                 <h2><span translate="no" class="material-symbols-outlined notranslate">contact_mail</span><span data-lang="profile_title"></span></h2>
                 <p class="pe-section__description" data-lang="profile_desc"></p>
-                <div class="pe-contact-list">
-                    <div class="pe-contact-list__item">
-                        <strong class="pe-contact-list__label" data-lang="contact_label_name"></strong>
-                        <span class="pe-contact-list__value" data-lang="rep_name"></span>
+                
+                <!-- [Fix] Standardized Class Naming -->
+                <div class="pe-profile-list">
+                    <div class="pe-profile-list__item">
+                        <strong class="pe-profile-list__label" data-lang="contact_label_name"></strong>
+                        <span class="pe-profile-list__value" data-lang="rep_name"></span>
                     </div>
-                    <div class="pe-contact-list__item">
-                        <strong class="pe-contact-list__label" data-lang="contact_label_email"></strong>
-                        <a href="#" class="pe-contact-list__value" data-lang="email_address" data-lang-href="email_href"></a>
+                    <div class="pe-profile-list__item">
+                        <strong class="pe-profile-list__label" data-lang="contact_label_email"></strong>
+                        <a href="mailto:andar@andar.kr" class="pe-profile-list__value" data-lang="email_address" data-lang-href="email_href"></a>
                     </div>
                 </div>
                 <div class="pe-button-group">
-                    <a href="#" class="pe-button" data-lang-href="profile_button_url" target="_blank" rel="noopener noreferrer">
+                    <a href="#" class="pe-button" data-lang-href="profile_button_url" rel="noopener noreferrer">
                         <span data-lang="profile_button"></span>
                     </a>
                 </div>
-                <!-- Demo Msg (Essential) -->
                 <p class="pe-demo-msg" data-lang="ex_demo_msg_profile"></p>
             </div>
         </section>
 
-        <!-- Demo Request (Moved to Last) -->
+        <!-- 8. Demo Request -->
         <section id="demo" class="pe-section js-fade-in">
             <div class="pe-container">
                 <h2><span translate="no" class="material-symbols-outlined notranslate">auto_awesome</span><span data-lang="ex_demo_title"></span></h2>
@@ -380,10 +320,11 @@
     <footer class="pe-footer">
         <div class="pe-container">
             <p class="render-as-html" data-lang="ex_copyright_text"></p>
-            <a data-lang-href="ex_footer_credit_url" rel="noopener noreferrer" data-lang="ex_footer_credit_text">Powered by Maxim</a>
+            <p><a data-lang-href="ex_footer_credit_url" rel="noopener noreferrer" data-lang="ex_footer_credit_text">Powered by Maxim</a></p>
         </div>
     </footer>
 
+    <!-- To Top Button -->
     <a href="#home" id="to-top-btn" class="hidden">
         <span translate="no" class="material-symbols-outlined notranslate">arrow_upward</span>
     </a>

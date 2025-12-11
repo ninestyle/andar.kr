@@ -1,6 +1,6 @@
 /*
     Version: Express 4.0
-    Last Modified: 2025-12-09 18:30 (KST)
+    Last Modified: 2025-12-11 20:10 (KST)
     File Name: lay.js
     Project Name: ANDAR
     Theme: ANDAR - Aroma & Spa
@@ -11,7 +11,7 @@ const siteConfig = {
     // 1. [Tier 1] Core Essentials
     // ------------------------------------------------
     language: 'ko',
-    theme_color: '#5A7D7C', // Andar Accent Color
+    theme_color: '#5A7D7C', // Andar Accent Color (Muted Teal)
     
     // [API Strategy] Demo Mode Active
     demo_mode: true,
@@ -20,10 +20,9 @@ const siteConfig = {
     // 2. [Tier 2] Visual Engine & Canvas
     // ------------------------------------------------
     canvas_target: '#home',
-    canvas_mode: 'lite',
     
-    // Custom Effect Injection (Defined below)
-    canvas_effect: 'starsEffect',
+    // Custom Effect (Fireflies for Spa vibe)
+    canvas_effect: 'fireflyEffect',
     
     // Canvas Options
     canvas_overlay: 'dotted',
@@ -38,101 +37,102 @@ const siteConfig = {
     // ------------------------------------------------
     icon_buttons: [
         { name: 'Profile', icon: 'mail', url: '#profile' },
-        { name: 'Request', icon: 'auto_awesome', url: '#demo' }
+        { name: 'Location', icon: 'location_on', url: '#location' },
+        { name: 'Reservation', icon: 'calendar_month', url: '#demo' }
     ],
-
-    scroll_smooth: true,
-    nav_active_class: 'active'
+    scroll_smooth: true
 };
 
-// [Custom Effect] Stars Effect (Migrated from V3)
-const starsEffect = {
-    init: (headerElement) => {
-        const canvas = document.createElement('canvas');
-        canvas.id = 'ce-bg-canvas';
-        canvas.style.mixBlendMode = 'screen';
+// [Tier 3] Custom Effect: Fireflies (Calm & Natural)
+const fireflyEffect = {
+    canvas: null,
+    ctx: null,
+    width: 0,
+    height: 0,
+    flies: [],
+    animationFrameId: null,
+
+    init(container) {
+        this.container = container;
+        this.canvas = container.querySelector('.ex-canvas__effect');
+        if (!this.canvas) {
+            this.canvas = document.createElement('canvas');
+            this.canvas.className = 'ex-canvas__effect';
+            container.appendChild(this.canvas);
+        }
+        this.ctx = this.canvas.getContext('2d');
         
-        // V4: Ensure canvas is absolutely positioned within the container
-        canvas.style.position = 'absolute';
-        canvas.style.top = '0';
-        canvas.style.left = '0';
-        canvas.style.width = '100%';
-        canvas.style.height = '100%';
-        canvas.style.zIndex = '1'; // Above Image, Below Content
+        this.resize = this.resize.bind(this);
+        this.animate = this.animate.bind(this);
+        
+        window.addEventListener('resize', this.resize);
+        this.resize();
+        this.createFlies();
+        this.animate();
+    },
 
-        headerElement.prepend(canvas);
+    resize() {
+        if (!this.container) return;
+        this.width = this.container.offsetWidth;
+        this.height = this.container.offsetHeight;
+        this.canvas.width = this.width;
+        this.canvas.height = this.height;
+    },
 
-        const ctx = canvas.getContext('2d');
-        let animationFrameId;
-        let stars;
-
-        const resizeCanvas = () => {
-            const dpr = window.devicePixelRatio || 1;
-            const rect = headerElement.getBoundingClientRect();
-            canvas.width = rect.width * dpr;
-            canvas.height = rect.height * dpr;
-            ctx.scale(dpr, dpr);
-        };
-
-        const initStars = () => {
-            stars = [];
-            const w = canvas.width / (window.devicePixelRatio || 1);
-            const h = canvas.height / (window.devicePixelRatio || 1);
-            const starCount = Math.floor((w * h) / 10000);
-            for (let i = 0; i < starCount; i++) {
-                stars.push({
-                    x: Math.random() * w,
-                    y: Math.random() * h,
-                    radius: Math.random() * 2 + 0.5,
-                    alpha: 0.5 + Math.random() * 0.4,
-                    speed: Math.random() * 0.2 + 0.05
-                });
-            }
-        };
-
-        const animateStars = () => {
-            if (!ctx) return;
-            const w = canvas.width / (window.devicePixelRatio || 1);
-            const h = canvas.height / (window.devicePixelRatio || 1);
-            ctx.clearRect(0, 0, w, h);
-            
-            stars.forEach(star => {
-                star.y -= star.speed;
-                if (star.y < 0) {
-                    star.y = h;
-                    star.x = Math.random() * w;
-                }
-                ctx.beginPath();
-                ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
-                ctx.fill();
+    createFlies() {
+        const count = 50;
+        this.flies = [];
+        for (let i = 0; i < count; i++) {
+            this.flies.push({
+                x: Math.random() * this.width,
+                y: Math.random() * this.height,
+                radius: Math.random() * 2 + 1,
+                speedX: (Math.random() - 0.5) * 0.5,
+                speedY: (Math.random() - 0.5) * 0.5,
+                alpha: Math.random(),
+                fading: Math.random() > 0.5
             });
-            
-            animationFrameId = requestAnimationFrame(animateStars);
-        };
+        }
+    },
 
-        const handleResize = () => {
-            if (animationFrameId) cancelAnimationFrame(animationFrameId);
-            resizeCanvas();
-            initStars();
-            animateStars();
-        };
+    animate() {
+        if (!this.ctx) return;
+        this.ctx.clearRect(0, 0, this.width, this.height);
 
-        resizeCanvas();
-        initStars();
-        animateStars();
-        window.addEventListener('resize', handleResize);
+        this.flies.forEach(fly => {
+            fly.x += fly.speedX;
+            fly.y += fly.speedY;
+
+            // Bounce off edges gently
+            if (fly.x < 0 || fly.x > this.width) fly.speedX *= -1;
+            if (fly.y < 0 || fly.y > this.height) fly.speedY *= -1;
+
+            // Twinkle effect
+            if (fly.fading) {
+                fly.alpha -= 0.01;
+                if (fly.alpha <= 0.2) fly.fading = false;
+            } else {
+                fly.alpha += 0.01;
+                if (fly.alpha >= 0.8) fly.fading = true;
+            }
+
+            this.ctx.beginPath();
+            this.ctx.arc(fly.x, fly.y, fly.radius, 0, Math.PI * 2);
+            this.ctx.fillStyle = `rgba(255, 255, 200, ${fly.alpha})`; // Warm soft yellow
+            this.ctx.fill();
+        });
+
+        this.animationFrameId = requestAnimationFrame(this.animate);
     }
 };
 
-// V4 Initialization
+// [Tier 3] V4 Initialization Pattern
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof PE_V4 !== 'undefined') {
-        // Register custom effect before init
+        // Initialize Engine first
         PE_V4.init(siteConfig).then(engine => {
-             engine.registerEffect('starsEffect', starsEffect.init);
+            // Then register effect securely
+            engine.registerEffect('fireflyEffect', fireflyEffect);
         });
-    } else {
-        console.error("Express V4 Libraries not loaded.");
     }
 });
