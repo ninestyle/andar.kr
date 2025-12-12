@@ -110,7 +110,7 @@
         "contact_label_name": "Representative:",
         "contact_label_email": "Email:",
         "profile_button": "Book Now",
-        "profile_button_url": "https://app.9style.com/order/andar/?lang=en",
+        "profile_button_url": "https://app.dam.so/order/andar/?lang=en",
         "location_title": "Location",
         "location_label_address": "Address:"
     },
@@ -200,7 +200,7 @@
         "contact_label_name": "대표:",
         "contact_label_email": "이메일:",
         "profile_button": "예약하기",
-        "profile_button_url": "https://app.9style.com/order/andar/?lang=ko",
+        "profile_button_url": "https://app.dam.so/order/andar/?lang=ko",
         "location_title": "오시는 길",
         "location_label_address": "주소:"
     }
