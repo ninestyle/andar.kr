@@ -203,3 +203,4 @@ body {
 .pe-section--parallax.section-divider::after { display: none; }
 .pe-section#demo { padding: 100px 0; }
 .pe-card__tag { background-color: var(--ex-color-accent); color: #FFF; border-radius: 4px; }
+.pe-audio-wrapper audio { width: 100%; }
