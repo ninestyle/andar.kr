@@ -5,6 +5,7 @@
         "email_address": "andar@andar.kr",
         "email_href": "mailto:andar@andar.kr",
         "address_text": "456 North Camden Drive, Beverly Hills, CA 90210, USA",
+        "profile_button_url": "/request",
         "services_01_price_1_value": "$120",
         "services_01_price_2_value": "$170",
         "services_02_price_1_value": "$140",
@@ -110,7 +111,6 @@
         "contact_label_name": "Representative:",
         "contact_label_email": "Email:",
         "profile_button": "Book Now",
-        "profile_button_url": "https://app.dam.so/order/andar/?lang=en",
         "location_title": "Location",
         "location_label_address": "Address:"
     },
@@ -200,7 +200,6 @@
         "contact_label_name": "대표:",
         "contact_label_email": "이메일:",
         "profile_button": "예약하기",
-        "profile_button_url": "https://app.dam.so/order/andar/?lang=ko",
         "location_title": "오시는 길",
         "location_label_address": "주소:"
     }
