@@ -14,7 +14,6 @@ const siteConfig = {
 };
 
 if (typeof FE_V4 !== 'undefined') FE_V4.init(siteConfig);
-else if (typeof PE_V4 !== 'undefined') PE_V4.init(siteConfig);
 
 
 document.addEventListener('DOMContentLoaded', () => {
